@@ -1,0 +1,30 @@
+﻿<Window x:Class="SP_Task_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SP_Task_2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="600" Background="DarkCyan">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Label Content="From" FontSize="20"  VerticalAlignment="Center" Margin="0 0 20 0"/>
+            <TextBox x:Name="FromBox" Width="260" Height="30" VerticalAlignment="Center" FontSize="20"/>
+            <Button x:Name="FromButton" Content="File..." Foreground="White" Background="Black" FontSize="20" Width="190" Height="30" Margin="60 0 0 0" Click="FileClickButton"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" >
+            <Label Content="To" FontSize="20"  VerticalAlignment="Center" Margin="0 0 40 0"/>
+            <TextBox x:Name="ToBox" Width="259" Height="30" VerticalAlignment="Center" FontSize="20"/>
+            <Button x:Name="ToButton" Foreground="White" Background="Black" Content="File..." FontSize="20" Width="196" Height="30" Margin="60 0 0 0" Click="FileClickButton" />
+        </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <ProgressBar x:Name="CopyBar" Width="350" Height="30" Margin="10 10 0 0" HorizontalAlignment="Left" VerticalAlignment="Center" Value="{Binding Value}" Maximum="{Binding Maximum}"/>
+            <Button Background="Black" Foreground="White" Content="Copy" FontSize="20" Width="200" Height="30" Margin="26 6 0 0" Click="CopyClickButton"/>
+        </StackPanel>
+    </Grid>
+</Window>
